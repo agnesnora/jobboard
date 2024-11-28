@@ -9,13 +9,17 @@
 
 <body>
     <h1>{{$title}}</h1>
+   
     <ul>
-        @foreach($jobs as $job)
-        <li>{{$job}}</li>
-        @endforeach
+        @forelse($jobs as $job)
+        <li>{{$loop->index}}.    {{$job}}</li>
+        @empty
+        <p>No jobs found</p>
+        @endforelse
 
        
     </ul>
+   
 </body>
 
 </html>

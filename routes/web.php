@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\JobController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 
@@ -7,16 +9,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/jobs', function () {
-    $title = "cili was here";
-    $jobs = [
-        "webdeveloper",
-        'qa engineer',
-        "software engineer",
-        "system analyst"
-    ];
-    return view('jobs.index', compact('title', 'jobs'));
-})->name('jobs');
+Route::get('/jobs', [JobController::class, 'index']);
+Route::get('/jobs/create', [JobController::class, 'create']);
+Route::get('/jobs/{id}', [JobController::class, 'show']);
+Route::get('/', [HomeController::class, 'index']);
+
 
 /* 
 Route::post('/submit', function () {
