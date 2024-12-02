@@ -1,7 +1,7 @@
 
     
     <x-layout>   
-        <x-slot name="title">Create Job</x-slot>>
+        <x-slot name="title">Create Job</x-slot>
         <h1>Create</h1>
    
         <form action="/jobs" method="POST">
