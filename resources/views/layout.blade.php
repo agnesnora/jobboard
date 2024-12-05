@@ -13,11 +13,13 @@
     <x-header/>
     @if(request()->is("/"))
     <x-hero/>
+    <x-top-banner/>
     @endif
     <h1>Layout component</h1>
   
 
     <main class="container mx-auto p-4 mt-4">{{$slot}}</main>
+    <x-bottom-banner/>
     <script src="{{asset('js/script.js')}}"></script>
   </body>
 </html>
