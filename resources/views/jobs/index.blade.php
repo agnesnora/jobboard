@@ -4,7 +4,7 @@
    
         <ul>
             @forelse($jobs as $job)
-            <li>{{$loop->index}}.    {{$job}}</li>
+            <li>{{$job->title}} </br>{{$job->description}}</li>
             @empty
             <p>No jobs found</p>
             @endforelse
