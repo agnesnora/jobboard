@@ -2,7 +2,7 @@
     
     <x-layout>   <h1>Jobs list</h1>
    
-        <ul>./vendor
+        <ul>
             @forelse($jobs as $job)
             <li>
                 <a href="{{route('jobs.show', $job->id)}}">{{$job->title}} </a>
