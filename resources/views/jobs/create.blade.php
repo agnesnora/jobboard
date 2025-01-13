@@ -12,7 +12,7 @@
                 {{$message}}
             </div>
             @enderror
-            <input type="text" name="description" placeholder="description" value="{{old('description')}}">
+            <input type="text" name="description" placeholder="description" value="{{old('description ')}}">
             @error('description')
             <div class="text-red-500 mt-2 text-sm">
                 {{$message}}

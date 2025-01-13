@@ -28,12 +28,12 @@ return new class extends Migration
             $table->string("city");
             $table->string("state");
             $table->string("zipcode")->nullable();
-            $table->string("contact-email");
+            $table->string("contact_email");
             $table->string("contact_phone")->nullable();
             $table->string("company_name");
-            $table->string("company-description")->nullable();
-            $table->string("company-logo")->nullable();
-            $table->string("company-website")->nullable();
+            $table->string("company_description")->nullable();
+            $table->string("company_logo")->nullable();
+            $table->string("company_website")->nullable();
 
             //Add user foreign key constraint
 
